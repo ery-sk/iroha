@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ery-sk/natto.git
+  revision: 7801f1294dcda534b707024182a1b5743d0e41e8
+  specs:
+    natto (1.1.2)
+      ffi (>= 1.9.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -179,6 +186,7 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   listen (>= 3.0.5, < 3.2)
+  natto!
   puma (~> 3.11)
   rails (~> 5.2.3)
   rspec-rails
