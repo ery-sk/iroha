@@ -1,0 +1,50 @@
+require:
+  - rubocop-rspec
+  - rubocop-performance
+
+inherit_mode:
+  merge:
+    - Include
+
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'vendor/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+Rails:
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*.rb
+    - config/**/*.rb
+    - db/migrate/*.rb
+    - lib/tasks/**/*.rake
+    - Gemfile
+
+Metrics/LineLength:
+  AllowHeredoc: true
+  AllowURI: true
+  Max: 120
+  Exclude:
+    - spec/**/*
+
+Metrics/ModuleLength:
+  Exclude:
+    - spec/**/*
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/MixinUsage:
+  Exclude:
+    - bin/*
